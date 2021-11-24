@@ -28,7 +28,5 @@ function getColorToGuess() {
   rgbToGuess.innerHTML = balls[rdnBall].style.backgroundColor;
 }
 
-
-
 putRandomColor();
 getColorToGuess();
