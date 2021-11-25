@@ -1,11 +1,10 @@
 * {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: Lucida Sans, Geneva, Verdana, sans-serif;
 }
 
 .container {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
   align-content: space-around;
@@ -26,13 +25,13 @@ main {
 }
 
 #reset-game {
-  margin: 2em 0em;
+  margin: 2em 0;
   padding: 1em;
   background-color: rgb(186, 214, 220);
   border-style: none;
   border-radius: 5em;
 }
 
-#reset-game:hover{
+#reset-game:hover {
   background-color: rgb(109, 191, 194);
 }
