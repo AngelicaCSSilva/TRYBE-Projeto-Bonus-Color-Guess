@@ -1,10 +1,16 @@
 .container {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
-  justify-items: center;
   align-items: center;
-  align-content: center;
+  align-content: space-around;
+}
+
+main {
+  background-color: rgb(235, 235, 252);
+  padding: 2em;
+  border-radius: 5em;
 }
 
 .ball {
