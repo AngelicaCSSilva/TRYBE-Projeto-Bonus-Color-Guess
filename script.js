@@ -26,12 +26,27 @@ function getColorToGuess() {
   rgbToGuess.innerHTML = balls[rdnBall].style.backgroundColor;
 }
 
+let score = 0;
+function answerScore() {
+  const scorePoints = document.querySelector('#score-number');
+  scorePoints.innerText = score;
+}
+
+function removeCorrect() {
+  const correctBall = document.querySelector('.correct');
+  correctBall.classList.remove('correct');
+}
+
 function checkCorrect(event) {
   const answer = document.querySelector('#answer');
   const ballClicked = event.target;
   if (ballClicked.classList.contains('correct')) {
     answer.innerText = 'Acertou!';
+    score += 3;
+    answerScore();
+    removeCorrect();
   } else {
+    removeCorrect();
     answer.innerText = 'Errou! Tente novamente!';
   }
 }
