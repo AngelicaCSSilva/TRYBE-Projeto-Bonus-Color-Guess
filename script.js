@@ -1,12 +1,10 @@
 // Função que gera cores aleatórias.
 // ref.: https://stackoverflow.com/questions/1484506/random-color-generator
 function getRandomColor() {
-  const number = [];
-  for (let rgb = 0; rgb < 3; rgb += 1) {
-    number.push(Math.floor(Math.random() * 201));
-  }
-  const color = `rgb(${number[0]}, ${number[1]}, ${number[2]})`;
-  return color;
+  const red = Math.floor(Math.random() * 256);
+  const green = Math.floor(Math.random() * 256);
+  const blue = Math.floor(Math.random() * 256);
+  return `rgb(${red}, ${green}, ${blue})`;
 }
 
 // Função que coloca cores aleatórias nas bolas.
@@ -17,14 +15,14 @@ function putRandomColor() {
     balls[index].style.backgroundColor = getRandomColor();
   }
 
-  return (balls[Math.floor(Math.random() * 7)]);
+  return (balls[Math.floor(Math.random() * 6)]);
 }
 
 // Seleciona uma cor de uma bola para ser adivinhada.
 function getColorToGuess() {
   const rgbToGuess = document.querySelector('#rgb-color');
   const balls = document.querySelectorAll('.ball');
-  const rdnBall = Math.floor(Math.random() * 7);
+  const rdnBall = Math.floor(Math.random() * 6);
   rgbToGuess.innerHTML = balls[rdnBall].style.backgroundColor;
 }
 
