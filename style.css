@@ -1,3 +1,7 @@
+* {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -9,8 +13,9 @@
 
 main {
   background-color: rgb(235, 235, 252);
-  padding: 2em;
+  padding: 1em 2em;
   border-radius: 5em;
+  text-align: center;
 }
 
 .ball {
@@ -18,4 +23,16 @@ main {
   height: 5em;
   width: 5em;
   border-radius: 100%;
+}
+
+#reset-game {
+  margin: 2em 0em;
+  padding: 1em;
+  background-color: rgb(186, 214, 220);
+  border-style: none;
+  border-radius: 5em;
+}
+
+#reset-game:hover{
+  background-color: rgb(109, 191, 194);
 }
