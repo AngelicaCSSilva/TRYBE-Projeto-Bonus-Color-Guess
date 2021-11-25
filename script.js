@@ -38,10 +38,23 @@ function checkCorrect(event) {
 
 function clickBall() {
   const balls = document.querySelector('#balls-section');
-  console.log(balls);
   balls.addEventListener('click', checkCorrect);
+}
+
+function resetGame() {
+  putRandomColor();
+  getColorToGuess();
+  const answer = document.querySelector('#answer');
+  answer.innerText = 'Escolha uma cor';
+  clickBall();
+}
+
+function btnReset() {
+  const reset = document.querySelector('#reset-game');
+  reset.addEventListener('click', resetGame);
 }
 
 putRandomColor();
 getColorToGuess();
 clickBall();
+btnReset();
